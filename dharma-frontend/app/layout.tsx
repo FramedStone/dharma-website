@@ -5,8 +5,8 @@ import './styles/globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Notion-like Landing Page',
-  description: 'A Notion-inspired landing page built with Next.js',
+  title: '首页-大马佛教大学',
+  description: '首页-大马佛教大学',
 }
 
 export default function RootLayout({
