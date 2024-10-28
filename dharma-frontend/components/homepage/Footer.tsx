@@ -1,6 +1,13 @@
+'use client'
+
 import { Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { motion } from 'framer-motion'
 
 export default function Footer() {
+  const iconVariants = {
+    hover: { scale: 1.2, rotate: 5 }
+  }
+
   return (
     <footer className="bg-gray-800 text-white py-12">
       <div className="container mx-auto px-4">
@@ -12,10 +19,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect with us</h3>
             <div className="flex space-x-4">
-              <Facebook className="cursor-pointer hover:text-primary" />
-              <Twitter className="cursor-pointer hover:text-primary" />
-              <Instagram className="cursor-pointer hover:text-primary" />
-              <Linkedin className="cursor-pointer hover:text-primary" />
+              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+                <motion.div key={index} variants={iconVariants} whileHover="hover">
+                  <Icon className="cursor-pointer hover:text-primary" />
+                </motion.div>
+              ))}
             </div>
           </div>
           <div>
